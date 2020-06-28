@@ -25,7 +25,15 @@ final class AppCoordinator: Coordinator {
     }
     
     func start() {
+        // Don't have window reference -> solution is to pass from scene delegate
         let navigationController = UINavigationController()
+        
+        let eventListCoordinator = EventListCoordinator(navigationController: navigationController)
+        
+        // Need to append to avoid deallocation & start
+        childCoordinators.append(eventListCoordinator)
+        eventListCoordinator.start()
+        
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
         
