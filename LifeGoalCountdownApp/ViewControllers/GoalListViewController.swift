@@ -1,5 +1,5 @@
 //
-//  EventListViewController.swift
+//  GoalListViewController.swift
 //  LifeGoalCountdownApp
 //
 //  Created by Johana Šlechtová on 28/06/2020.
@@ -35,7 +35,7 @@ class GoalListViewController: UIViewController {
         let barButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(tappedRightBarButton))
         barButtonItem.tintColor = .primary
         navigationItem.rightBarButtonItem = barButtonItem
-        navigationItem.title = "Events"
+        navigationItem.title = "Your Life Goals"
         navigationController?.navigationBar.prefersLargeTitles = true
     }
 }

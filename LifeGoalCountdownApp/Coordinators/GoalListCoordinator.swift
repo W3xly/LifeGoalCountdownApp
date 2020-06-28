@@ -1,5 +1,5 @@
 //
-//  EventListCoordinator.swift
+//  GoalListCoordinator.swift
 //  LifeGoalCountdownApp
 //
 //  Created by Johana Šlechtová on 28/06/2020.
@@ -18,9 +18,9 @@ final class GoalListCoordinator: Coordinator {
     }
     
     func start() {
-        // setup eventListViewController as rootViewController in navigationController
+        // setup goalListViewController as rootViewController in navigationController
         // always setup in storyboard!
-        let eventListViewController = GoalListViewController.instantiate() // connection to storyboard
-        navigationController.setViewControllers([eventListViewController], animated: false)
+        let goalListViewController = GoalListViewController.instantiate() // connection to storyboard
+        navigationController.setViewControllers([goalListViewController], animated: false)
     }
 }
