@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class GoalListViewController: UIViewController {
+    
+    private let coreDataManager = CoreDataManager()
     
     static func instantiate() -> GoalListViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: .main)
@@ -20,6 +23,9 @@ class GoalListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        
+        coreDataManager.saveGoal(name: "New Years", date: Date(), image: #imageLiteral(resourceName: "clock"))
+        print("DEBUG: Fetch Result: \(coreDataManager.fetchGoals())")
     }
     
     //MARK: - Actions

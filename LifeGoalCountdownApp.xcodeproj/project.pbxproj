@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		10940B4F24A9E48F00A02A29 /* LifeGoalCountdownApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 10940B4D24A9E48F00A02A29 /* LifeGoalCountdownApp.xcdatamodeld */; };
+		10940B5124A9E5ED00A02A29 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10940B5024A9E5ED00A02A29 /* CoreDataManager.swift */; };
 		10C4B98D24A8B15C00A761A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C4B98C24A8B15C00A761A8 /* AppDelegate.swift */; };
 		10C4B98F24A8B15C00A761A8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C4B98E24A8B15C00A761A8 /* SceneDelegate.swift */; };
 		10C4B99124A8B15C00A761A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C4B99024A8B15C00A761A8 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		10940B4E24A9E48F00A02A29 /* LifeGoalCountdownApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LifeGoalCountdownApp.xcdatamodel; sourceTree = "<group>"; };
+		10940B5024A9E5ED00A02A29 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		10C4B98924A8B15C00A761A8 /* LifeGoalCountdownApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeGoalCountdownApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10C4B98C24A8B15C00A761A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10C4B98E24A8B15C00A761A8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				10C4B9A924A8DE6C00A761A8 /* UIColor + Extensions.swift */,
 				10C4B99A24A8B15E00A761A8 /* Info.plist */,
 				10940B4D24A9E48F00A02A29 /* LifeGoalCountdownApp.xcdatamodeld */,
+				10940B5024A9E5ED00A02A29 /* CoreDataManager.swift */,
 			);
 			path = LifeGoalCountdownApp;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				10C4B99124A8B15C00A761A8 /* ViewController.swift in Sources */,
 				10C4B9AA24A8DE6C00A761A8 /* UIColor + Extensions.swift in Sources */,
 				10C4B98D24A8B15C00A761A8 /* AppDelegate.swift in Sources */,
+				10940B5124A9E5ED00A02A29 /* CoreDataManager.swift in Sources */,
 				10C4B98F24A8B15C00A761A8 /* SceneDelegate.swift in Sources */,
 				10C4B9A524A8B5C100A761A8 /* GoalListCoordinator.swift in Sources */,
 			);
