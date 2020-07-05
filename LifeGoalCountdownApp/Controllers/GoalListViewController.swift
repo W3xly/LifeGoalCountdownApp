@@ -7,12 +7,11 @@
 //
 
 import UIKit
-import CoreData
 
 class GoalListViewController: UIViewController {
     
-    private let coreDataManager = CoreDataManager()
-    
+    var viewModel: GoalListViewModel!
+        
     static func instantiate() -> GoalListViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: .main)
         // Setup Identifier in storyboard
@@ -23,25 +22,22 @@ class GoalListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-        
-        coreDataManager.saveGoal(name: "New Years", date: Date(), image: #imageLiteral(resourceName: "clock"))
-        print("DEBUG: Fetch Result: \(coreDataManager.fetchGoals())")
     }
     
     //MARK: - Actions
     
-    @objc private func tappedRightBarButton() {
-        print("DEBUG: Tapped right bar button item..")
+    @objc private func tappedAddGoalButton() {
+        viewModel.tappedAddGoal()
     }
     
     //MARK: - Helpers
     
     func configureUI() {
         let image = UIImage(systemName: "plus.circle.fill")
-        let barButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(tappedRightBarButton))
+        let barButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(tappedAddGoalButton))
         barButtonItem.tintColor = .primary
         navigationItem.rightBarButtonItem = barButtonItem
-        navigationItem.title = "Your Life Goals"
+        navigationItem.title = viewModel.title
         navigationController?.navigationBar.prefersLargeTitles = true
     }
 }

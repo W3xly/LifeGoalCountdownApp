@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1036990D24B20FE80053F4AA /* GoalListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1036990C24B20FE80053F4AA /* GoalListViewModel.swift */; };
+		1036990F24B228EB0053F4AA /* AddGoalCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1036990E24B228EB0053F4AA /* AddGoalCoordinator.swift */; };
 		10940B4F24A9E48F00A02A29 /* LifeGoalCountdownApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 10940B4D24A9E48F00A02A29 /* LifeGoalCountdownApp.xcdatamodeld */; };
 		10940B5124A9E5ED00A02A29 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10940B5024A9E5ED00A02A29 /* CoreDataManager.swift */; };
 		10C4B98D24A8B15C00A761A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C4B98C24A8B15C00A761A8 /* AppDelegate.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1036990C24B20FE80053F4AA /* GoalListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalListViewModel.swift; sourceTree = "<group>"; };
+		1036990E24B228EB0053F4AA /* AddGoalCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalCoordinator.swift; sourceTree = "<group>"; };
 		10940B4E24A9E48F00A02A29 /* LifeGoalCountdownApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LifeGoalCountdownApp.xcdatamodel; sourceTree = "<group>"; };
 		10940B5024A9E5ED00A02A29 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		10C4B98924A8B15C00A761A8 /* LifeGoalCountdownApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeGoalCountdownApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +54,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1036990924B20FBE0053F4AA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1036990C24B20FE80053F4AA /* GoalListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		10C4B98024A8B15C00A761A8 = {
 			isa = PBXGroup;
 			children = (
@@ -71,8 +83,9 @@
 			children = (
 				10C4B9A224A8B3D700A761A8 /* Launch */,
 				10C4B99024A8B15C00A761A8 /* ViewController.swift */,
+				1036990924B20FBE0053F4AA /* ViewModels */,
 				10C4B9A324A8B59900A761A8 /* Coordinators */,
-				10C4B9A624A8B62B00A761A8 /* ViewControllers */,
+				10C4B9A624A8B62B00A761A8 /* Controllers */,
 				10C4B99224A8B15C00A761A8 /* Main.storyboard */,
 				10C4B99524A8B15E00A761A8 /* Assets.xcassets */,
 				10C4B9AB24A8DE7400A761A8 /* Extensions */,
@@ -99,16 +112,17 @@
 			children = (
 				10C4B9A024A8B1A700A761A8 /* AppCoordinator.swift */,
 				10C4B9A424A8B5C100A761A8 /* GoalListCoordinator.swift */,
+				1036990E24B228EB0053F4AA /* AddGoalCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
 		};
-		10C4B9A624A8B62B00A761A8 /* ViewControllers */ = {
+		10C4B9A624A8B62B00A761A8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				10C4B9A724A8B64200A761A8 /* GoalListViewController.swift */,
 			);
-			path = ViewControllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		10C4B9AB24A8DE7400A761A8 /* Extensions */ = {
@@ -193,6 +207,8 @@
 				10C4B9A124A8B1A700A761A8 /* AppCoordinator.swift in Sources */,
 				10C4B9A824A8B64200A761A8 /* GoalListViewController.swift in Sources */,
 				10940B4F24A9E48F00A02A29 /* LifeGoalCountdownApp.xcdatamodeld in Sources */,
+				1036990F24B228EB0053F4AA /* AddGoalCoordinator.swift in Sources */,
+				1036990D24B20FE80053F4AA /* GoalListViewModel.swift in Sources */,
 				10C4B99124A8B15C00A761A8 /* ViewController.swift in Sources */,
 				10C4B9AA24A8DE6C00A761A8 /* UIColor + Extensions.swift in Sources */,
 				10C4B98D24A8B15C00A761A8 /* AppDelegate.swift in Sources */,

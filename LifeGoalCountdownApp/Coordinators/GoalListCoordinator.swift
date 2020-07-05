@@ -21,6 +21,15 @@ final class GoalListCoordinator: Coordinator {
         // setup goalListViewController as rootViewController in navigationController
         // always setup in storyboard!
         let goalListViewController = GoalListViewController.instantiate() // connection to storyboard
+        let goalListViewModel = GoalListViewModel()
+        goalListViewModel.coordinator = self
+        goalListViewController.viewModel = goalListViewModel
         navigationController.setViewControllers([goalListViewController], animated: false)
+    }
+    
+    func startAddGoal() {
+        let addGoalCoordinator = AddGoalCoordinator(navigationController: navigationController)
+        childCoordinators.append(addGoalCoordinator)
+        addGoalCoordinator.start()
     }
 }
