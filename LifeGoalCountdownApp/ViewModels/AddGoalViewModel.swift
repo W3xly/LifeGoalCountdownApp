@@ -6,17 +6,18 @@
 //  Copyright © 2020 Jan Podmolík. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 final class AddGoalViewModel {
+    
+    enum Cell {
+        case titleSubtitle(TitleSubtitleCellViewModel)
+        case titleImage
+    }
     
     var coordinator: AddGoalCoordinator?
     
     func viewDidDisappear() {
         coordinator?.didFinishAddEvent()
-    }
-    
-    deinit {
-        print("DEBUG: Deinit from \(self)")
     }
 }

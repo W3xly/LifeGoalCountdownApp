@@ -14,6 +14,8 @@
 		10940B4F24A9E48F00A02A29 /* LifeGoalCountdownApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 10940B4D24A9E48F00A02A29 /* LifeGoalCountdownApp.xcdatamodeld */; };
 		10940B5124A9E5ED00A02A29 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10940B5024A9E5ED00A02A29 /* CoreDataManager.swift */; };
 		10B483D624B31939007297A9 /* AddGoalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B483D524B31939007297A9 /* AddGoalViewModel.swift */; };
+		10B483DA24B35C94007297A9 /* TitleSubtitleCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B483D924B35C94007297A9 /* TitleSubtitleCellViewModel.swift */; };
+		10B483DD24B35CF6007297A9 /* TitleSubtitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B483DC24B35CF6007297A9 /* TitleSubtitleCell.swift */; };
 		10C4B98D24A8B15C00A761A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C4B98C24A8B15C00A761A8 /* AppDelegate.swift */; };
 		10C4B98F24A8B15C00A761A8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C4B98E24A8B15C00A761A8 /* SceneDelegate.swift */; };
 		10C4B99124A8B15C00A761A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C4B99024A8B15C00A761A8 /* ViewController.swift */; };
@@ -34,6 +36,8 @@
 		10940B4E24A9E48F00A02A29 /* LifeGoalCountdownApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LifeGoalCountdownApp.xcdatamodel; sourceTree = "<group>"; };
 		10940B5024A9E5ED00A02A29 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		10B483D524B31939007297A9 /* AddGoalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalViewModel.swift; sourceTree = "<group>"; };
+		10B483D924B35C94007297A9 /* TitleSubtitleCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSubtitleCellViewModel.swift; sourceTree = "<group>"; };
+		10B483DC24B35CF6007297A9 /* TitleSubtitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSubtitleCell.swift; sourceTree = "<group>"; };
 		10C4B98924A8B15C00A761A8 /* LifeGoalCountdownApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeGoalCountdownApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10C4B98C24A8B15C00A761A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10C4B98E24A8B15C00A761A8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,8 +69,17 @@
 			children = (
 				1036990C24B20FE80053F4AA /* GoalListViewModel.swift */,
 				10B483D524B31939007297A9 /* AddGoalViewModel.swift */,
+				10B483D924B35C94007297A9 /* TitleSubtitleCellViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		10B483DB24B35CE2007297A9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				10B483DC24B35CF6007297A9 /* TitleSubtitleCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		10C4B98024A8B15C00A761A8 = {
@@ -90,6 +103,7 @@
 			children = (
 				10C4B9A224A8B3D700A761A8 /* Launch */,
 				10C4B99024A8B15C00A761A8 /* ViewController.swift */,
+				10B483DB24B35CE2007297A9 /* Views */,
 				1036990924B20FBE0053F4AA /* ViewModels */,
 				10C4B9A324A8B59900A761A8 /* Coordinators */,
 				10C4B9A624A8B62B00A761A8 /* Controllers */,
@@ -213,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10B483DD24B35CF6007297A9 /* TitleSubtitleCell.swift in Sources */,
 				10C4B9A124A8B1A700A761A8 /* AppCoordinator.swift in Sources */,
 				10C4B9A824A8B64200A761A8 /* GoalListViewController.swift in Sources */,
 				10940B4F24A9E48F00A02A29 /* LifeGoalCountdownApp.xcdatamodeld in Sources */,
@@ -222,6 +237,7 @@
 				1036991324B230390053F4AA /* UIViewController+Extensions.swift in Sources */,
 				10C4B9AA24A8DE6C00A761A8 /* UIColor + Extensions.swift in Sources */,
 				10C4B98D24A8B15C00A761A8 /* AppDelegate.swift in Sources */,
+				10B483DA24B35C94007297A9 /* TitleSubtitleCellViewModel.swift in Sources */,
 				10B483D624B31939007297A9 /* AddGoalViewModel.swift in Sources */,
 				10940B5124A9E5ED00A02A29 /* CoreDataManager.swift in Sources */,
 				1036991124B22E660053F4AA /* AddGoalViewController.swift in Sources */,

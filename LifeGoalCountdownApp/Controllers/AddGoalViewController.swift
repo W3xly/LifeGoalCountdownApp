@@ -12,6 +12,7 @@ class AddGoalViewController: UIViewController {
     
     //MARK: - Properties
     
+    @IBOutlet weak var tableView: UITableView!
     var viewModel: AddGoalViewModel!
     
     //MARK: - Lifecycle
