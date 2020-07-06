@@ -13,13 +13,25 @@ final class AddGoalCoordinator: Coordinator {
     private(set) var childCoordinators: [Coordinator] = []
     private let navigationController: UINavigationController
     
+    var parentCoordinator: GoalListCoordinator?
+    
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     
     func start() {
-        let viewController = UIViewController()
-        viewController.view.backgroundColor = .red
-        navigationController.present(viewController, animated: true, completion: nil)
+        let addGoalViewController: AddGoalViewController = .instantiate()
+        let addGoalViewModel = AddGoalViewModel()
+        addGoalViewModel.coordinator = self
+        addGoalViewController.viewModel = addGoalViewModel
+        navigationController.present(addGoalViewController, animated: true, completion: nil)
+    }
+    
+    func didFinishAddEvent() {
+        parentCoordinator?.childDidFinish(self)
+    }
+    
+    deinit {
+        print("DEBUG: Deinit from \(self)")
     }
 }

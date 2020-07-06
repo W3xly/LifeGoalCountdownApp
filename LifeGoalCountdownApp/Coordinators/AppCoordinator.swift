@@ -10,7 +10,7 @@ import UIKit
 
 // if I don't retain the appCoordinator then it will be instantly deallocated (Testable by deinit block.) I need the scene delegate to hold onto it to stop this happening..
 
-protocol Coordinator {
+protocol Coordinator: class {
     // Append every new coordinator to this array - Retain coordinator, saves from immediately dealocation
     var childCoordinators: [Coordinator] { get }
     func start()

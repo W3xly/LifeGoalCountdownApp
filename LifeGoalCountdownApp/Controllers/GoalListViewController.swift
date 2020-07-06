@@ -11,13 +11,6 @@ import UIKit
 class GoalListViewController: UIViewController {
     
     var viewModel: GoalListViewModel!
-        
-    static func instantiate() -> GoalListViewController {
-        let storyboard = UIStoryboard(name: "Main", bundle: .main)
-        // Setup Identifier in storyboard
-        let controller = storyboard.instantiateViewController(withIdentifier: "GoalListViewController") as! GoalListViewController
-        return controller
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
