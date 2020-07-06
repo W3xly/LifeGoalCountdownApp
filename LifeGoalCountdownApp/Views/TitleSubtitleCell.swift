@@ -9,13 +9,13 @@
 import UIKit
 
 final class TitleSubtitleCell: UITableViewCell {
-    private let title = UILabel()
-    private let subtititleTextField = UITextField()
+    private let titleLabel = UILabel()
+    private let subtitleTextField = UITextField()
     private let verticalStackView = UIStackView()
+    private let constant: CGFloat = 15
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
         setupViews()
         setupHierarchy()
         setupLayout()
@@ -26,30 +26,32 @@ final class TitleSubtitleCell: UITableViewCell {
     }
     
     func update(with viewModel: TitleSubtitleCellViewModel) {
-        title.text = viewModel.title
-        subtititleTextField.text = viewModel.subtitle
-        subtititleTextField.placeholder = viewModel.placeholder
+        titleLabel.text = viewModel.title
+        subtitleTextField.text = viewModel.subtitle
+        subtitleTextField.placeholder = viewModel.placeholder
     }
     
     private func setupViews() {
         verticalStackView.axis = .vertical
-        title.font = .systemFont(ofSize: 22, weight: .medium)
-        subtititleTextField.font = .systemFont(ofSize: 20, weight: .medium)
-        
+        titleLabel.font = .systemFont(ofSize: 22, weight: .medium)
+        subtitleTextField.font = .systemFont(ofSize: 20, weight: .medium)
+        [verticalStackView, titleLabel, subtitleTextField].forEach {
+            $0.translatesAutoresizingMaskIntoConstraints = false
+        }
     }
     
     private func setupHierarchy() {
-        addSubview(verticalStackView)
-        verticalStackView.addArrangedSubview(title)
-        verticalStackView.addArrangedSubview(subtititleTextField)
+        contentView.addSubview(verticalStackView)
+        verticalStackView.addArrangedSubview(titleLabel)
+        verticalStackView.addArrangedSubview(subtitleTextField)
     }
     
     private func setupLayout() {
         NSLayoutConstraint.activate([
-            verticalStackView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            verticalStackView.leftAnchor.constraint(equalTo: contentView.leftAnchor),
-            verticalStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            verticalStackView.rightAnchor.constraint(equalTo: contentView.rightAnchor)
+            verticalStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: constant),
+            verticalStackView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: constant),
+            verticalStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -constant),
+            verticalStackView.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -constant)
         ])
     }
 }

@@ -30,8 +30,4 @@ final class AddGoalCoordinator: Coordinator {
     func didFinishAddEvent() {
         parentCoordinator?.childDidFinish(self)
     }
-    
-    deinit {
-        print("DEBUG: Deinit from \(self)")
-    }
 }
