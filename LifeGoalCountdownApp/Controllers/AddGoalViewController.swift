@@ -26,11 +26,25 @@ class AddGoalViewController: UIViewController {
             self?.tableView.reloadData()
         }
         viewModel.viewDidLoad()
+        
+        navigationItem.title = viewModel.title
+        navigationController?.navigationBar.prefersLargeTitles = true
+        // to force large titles
+        tableView.contentInsetAdjustmentBehavior = .never // normaly works just prefersLargeTitles
+        tableView.setContentOffset(.init(x: 0, y: -1), animated: false) // here We need these two lines
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(tappedDone))
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         viewModel.viewDidDisappear()
+    }
+    
+    //MARK: - Selectors
+    
+    @objc func tappedDone() {
+        viewModel.tappedDone()
     }
 }
 

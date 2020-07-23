@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		102EC0DB24C9C26100E06A12 /* UIColor + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102EC0DA24C9C26100E06A12 /* UIColor + Extensions.swift */; };
 		1036990D24B20FE80053F4AA /* GoalListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1036990C24B20FE80053F4AA /* GoalListViewModel.swift */; };
 		1036990F24B228EB0053F4AA /* AddGoalCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1036990E24B228EB0053F4AA /* AddGoalCoordinator.swift */; };
 		1036991124B22E660053F4AA /* AddGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1036991024B22E660053F4AA /* AddGoalViewController.swift */; };
@@ -25,10 +26,10 @@
 		10C4B9A124A8B1A700A761A8 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C4B9A024A8B1A700A761A8 /* AppCoordinator.swift */; };
 		10C4B9A524A8B5C100A761A8 /* GoalListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C4B9A424A8B5C100A761A8 /* GoalListCoordinator.swift */; };
 		10C4B9A824A8B64200A761A8 /* GoalListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C4B9A724A8B64200A761A8 /* GoalListViewController.swift */; };
-		10C4B9AA24A8DE6C00A761A8 /* UIColor + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C4B9A924A8DE6C00A761A8 /* UIColor + Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		102EC0DA24C9C26100E06A12 /* UIColor + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extensions.swift"; sourceTree = "<group>"; };
 		1036990C24B20FE80053F4AA /* GoalListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalListViewModel.swift; sourceTree = "<group>"; };
 		1036990E24B228EB0053F4AA /* AddGoalCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalCoordinator.swift; sourceTree = "<group>"; };
 		1036991024B22E660053F4AA /* AddGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalViewController.swift; sourceTree = "<group>"; };
@@ -49,7 +50,6 @@
 		10C4B9A024A8B1A700A761A8 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		10C4B9A424A8B5C100A761A8 /* GoalListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalListCoordinator.swift; sourceTree = "<group>"; };
 		10C4B9A724A8B64200A761A8 /* GoalListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalListViewController.swift; sourceTree = "<group>"; };
-		10C4B9A924A8DE6C00A761A8 /* UIColor + Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor + Extensions.swift"; path = "../../Apps/EventCountdown - MVVM + Coordinators/EventCountdown - MVVM + Coordinators/Extensions/UIColor + Extensions.swift"; sourceTree = "<group>"; };
 		10C4B9AC24A8DE7900A761A8 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,11 +110,10 @@
 				10C4B99224A8B15C00A761A8 /* Main.storyboard */,
 				10C4B99524A8B15E00A761A8 /* Assets.xcassets */,
 				10C4B9AB24A8DE7400A761A8 /* Extensions */,
+				10940B5024A9E5ED00A02A29 /* CoreDataManager.swift */,
 				10C4B99724A8B15E00A761A8 /* LaunchScreen.storyboard */,
-				10C4B9A924A8DE6C00A761A8 /* UIColor + Extensions.swift */,
 				10C4B99A24A8B15E00A761A8 /* Info.plist */,
 				10940B4D24A9E48F00A02A29 /* LifeGoalCountdownApp.xcdatamodeld */,
-				10940B5024A9E5ED00A02A29 /* CoreDataManager.swift */,
 			);
 			path = LifeGoalCountdownApp;
 			sourceTree = "<group>";
@@ -150,6 +149,7 @@
 		10C4B9AB24A8DE7400A761A8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				102EC0DA24C9C26100E06A12 /* UIColor + Extensions.swift */,
 				10C4B9AC24A8DE7900A761A8 /* UIColor+Extensions.swift */,
 				1036991224B230390053F4AA /* UIViewController+Extensions.swift */,
 			);
@@ -230,12 +230,12 @@
 				10B483DD24B35CF6007297A9 /* TitleSubtitleCell.swift in Sources */,
 				10C4B9A124A8B1A700A761A8 /* AppCoordinator.swift in Sources */,
 				10C4B9A824A8B64200A761A8 /* GoalListViewController.swift in Sources */,
+				102EC0DB24C9C26100E06A12 /* UIColor + Extensions.swift in Sources */,
 				10940B4F24A9E48F00A02A29 /* LifeGoalCountdownApp.xcdatamodeld in Sources */,
 				1036990F24B228EB0053F4AA /* AddGoalCoordinator.swift in Sources */,
 				1036990D24B20FE80053F4AA /* GoalListViewModel.swift in Sources */,
 				10C4B99124A8B15C00A761A8 /* ViewController.swift in Sources */,
 				1036991324B230390053F4AA /* UIViewController+Extensions.swift in Sources */,
-				10C4B9AA24A8DE6C00A761A8 /* UIColor + Extensions.swift in Sources */,
 				10C4B98D24A8B15C00A761A8 /* AppDelegate.swift in Sources */,
 				10B483DA24B35C94007297A9 /* TitleSubtitleCellViewModel.swift in Sources */,
 				10B483D624B31939007297A9 /* AddGoalViewModel.swift in Sources */,

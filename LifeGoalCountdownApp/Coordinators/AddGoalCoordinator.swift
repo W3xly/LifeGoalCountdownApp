@@ -20,14 +20,16 @@ final class AddGoalCoordinator: Coordinator {
     }
     
     func start() {
+        let modalNavigationController = UINavigationController()
         let addGoalViewController: AddGoalViewController = .instantiate()
+        modalNavigationController.setViewControllers([addGoalViewController], animated: false)
         let addGoalViewModel = AddGoalViewModel()
         addGoalViewModel.coordinator = self
         addGoalViewController.viewModel = addGoalViewModel
-        navigationController.present(addGoalViewController, animated: true, completion: nil)
+        navigationController.present(modalNavigationController, animated: true, completion: nil)
     }
     
-    func didFinishAddEvent() {
+    func didFinishAddGoal() {
         parentCoordinator?.childDidFinish(self)
     }
 }

@@ -10,6 +10,7 @@ import UIKit
 
 final class AddGoalViewModel {
     
+    let title = "Add"
     var onUpdate: () -> Void = {}
     
     enum Cell {
@@ -29,7 +30,7 @@ final class AddGoalViewModel {
     }
     
     func viewDidDisappear() {
-        coordinator?.didFinishAddEvent()
+        coordinator?.didFinishAddGoal()
     }
     
     func numberOfRowsInSection() -> Int {
@@ -38,5 +39,10 @@ final class AddGoalViewModel {
     
     func cell(for IndexPath: IndexPath) -> Cell {
         return cells[IndexPath.row]
+    }
+    
+    func tappedDone() {
+        // Extract info from cell view models and save in coredata
+        print("DEBUG: Tapped done!")
     }
 }
