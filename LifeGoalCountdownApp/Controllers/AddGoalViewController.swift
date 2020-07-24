@@ -73,8 +73,6 @@ extension AddGoalViewController: UITableViewDataSource {
                 // delegate -> func shouldChangeCharactersIn -> Set text in viewmodel and avoid reusing cell (clearing text)
                 cell.subtitleTextField.delegate = self
                 return cell
-            case .titleImage:
-                return UITableViewCell()
         }
     }
 }

@@ -15,7 +15,6 @@ final class AddGoalViewModel {
     
     enum Cell {
         case titleSubtitle(TitleSubtitleCellViewModel)
-        case titleImage
     }
     
     private(set) var cells: [AddGoalViewModel.Cell] = []
@@ -29,6 +28,10 @@ final class AddGoalViewModel {
                 self?.onUpdate()
                 }
             )),
+            .titleSubtitle(TitleSubtitleCellViewModel(title: "Background", subtitle: "", placeholder: "", type: .image, onCellUpdate:  { [weak self] in
+                self?.onUpdate()
+                }
+            ))
         ]
         onUpdate()
     }
@@ -55,8 +58,6 @@ final class AddGoalViewModel {
         switch cells[indexPath.row] {
             case .titleSubtitle(let titleSubtitleCellViewModel):
                 titleSubtitleCellViewModel.update(subtitle)
-            case .titleImage:
-                break
         }
     }
 }

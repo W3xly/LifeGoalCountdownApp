@@ -13,6 +13,7 @@ final class TitleSubtitleCellViewModel {
     enum CellType {
         case text
         case date
+        case image
     }
     
     let title: String
@@ -21,7 +22,7 @@ final class TitleSubtitleCellViewModel {
     
     let placeholder: String
     let type: CellType
-    
+        
     lazy var dateFormatted: DateFormatter = {
         let df = DateFormatter()
         df.dateFormat = "dd.MM.yyy"
@@ -45,5 +46,9 @@ final class TitleSubtitleCellViewModel {
         let dateString = dateFormatted.string(from: date)
         self.subtitle = dateString
         onCellUpdate?() // reload data
+    }
+    
+    func shouldHideImage() -> Bool {
+        type != .image
     }
 }
