@@ -9,13 +9,41 @@
 import Foundation
 
 final class TitleSubtitleCellViewModel {
+    
+    enum CellType {
+        case text
+        case date
+    }
+    
     let title: String
     private(set) var subtitle: String
-    let placeholder: String
+    private(set) var onCellUpdate: (() -> Void)? = {}
     
-    init(title: String, subtitle: String, placeholder: String) {
+    let placeholder: String
+    let type: CellType
+    
+    lazy var dateFormatted: DateFormatter = {
+        let df = DateFormatter()
+        df.dateFormat = "dd.MM.yyy"
+        return df
+    }()
+    
+    init(title: String, subtitle: String, placeholder: String, type: CellType, onCellUpdate: (() -> Void)?) {
         self.title = title
         self.subtitle = subtitle
         self.placeholder = placeholder
+        self.type = type
+        self.onCellUpdate = onCellUpdate
+    }
+    
+    func update(_ subtitle: String) {
+        self.subtitle = subtitle
+    }
+    
+    func update(_ date: Date) {
+        print("DEBUG: 123")
+        let dateString = dateFormatted.string(from: date)
+        self.subtitle = dateString
+        onCellUpdate?() // reload data
     }
 }

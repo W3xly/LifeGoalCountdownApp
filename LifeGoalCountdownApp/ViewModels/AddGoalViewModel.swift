@@ -23,8 +23,12 @@ final class AddGoalViewModel {
     
     func viewDidLoad() {
         cells = [
-            .titleSubtitle(TitleSubtitleCellViewModel(title: "Name", subtitle: "", placeholder: "Add any goal")),
-            .titleSubtitle(TitleSubtitleCellViewModel(title: "Date", subtitle: "", placeholder: "Achieve to")),
+            .titleSubtitle(TitleSubtitleCellViewModel(title: "Name", subtitle: "", placeholder: "Add any goal", type: .text, onCellUpdate: {}
+            )),
+            .titleSubtitle(TitleSubtitleCellViewModel(title: "Date", subtitle: "", placeholder: "Achieve to", type: .date, onCellUpdate:  { [weak self] in
+                self?.onUpdate()
+                }
+            )),
         ]
         onUpdate()
     }
@@ -43,6 +47,16 @@ final class AddGoalViewModel {
     
     func tappedDone() {
         // Extract info from cell view models and save in coredata
+        // Tell coordinator to dismiss
         print("DEBUG: Tapped done!")
+    }
+    
+    func updateCell(indexPath: IndexPath, subtitle: String) {
+        switch cells[indexPath.row] {
+            case .titleSubtitle(let titleSubtitleCellViewModel):
+                titleSubtitleCellViewModel.update(subtitle)
+            case .titleImage:
+                break
+        }
     }
 }
