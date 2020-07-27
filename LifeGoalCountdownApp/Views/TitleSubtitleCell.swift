@@ -59,13 +59,14 @@ final class TitleSubtitleCell: UITableViewCell {
         subtitleTextField.inputAccessoryView = viewModel.type == .text ? nil : toolBar
         
         photoImageView.isHidden = viewModel.shouldHideImage()
+        subtitleTextField.isHidden = viewModel.shouldHideTextField()
+        verticalStackView.spacing = viewModel.setSpacing()
     }
     
     private func setupViews() {
         verticalStackView.axis = .vertical
         titleLabel.font = .systemFont(ofSize: 22, weight: .medium)
         subtitleTextField.font = .systemFont(ofSize: 20, weight: .medium)
-        selectionStyle = .none
         
         [verticalStackView, titleLabel, subtitleTextField].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false

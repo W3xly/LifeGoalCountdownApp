@@ -6,7 +6,7 @@
 //  Copyright © 2020 Jan Podmolík. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 final class TitleSubtitleCellViewModel {
     
@@ -50,5 +50,12 @@ final class TitleSubtitleCellViewModel {
     
     func shouldHideImage() -> Bool {
         type != .image
+    }
+    func shouldHideTextField() -> Bool {
+        type == .image
+    }
+    
+    func setSpacing() -> CGFloat {
+        type == .image ? 15 : 0
     }
 }

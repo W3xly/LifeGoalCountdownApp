@@ -60,4 +60,14 @@ final class AddGoalViewModel {
                 titleSubtitleCellViewModel.update(subtitle)
         }
     }
+    
+    func didSelectRow(at indexPath: IndexPath) {
+        switch cells[indexPath.row] {
+            case .titleSubtitle(let titleSubtitleCellViewModel):
+                guard titleSubtitleCellViewModel.type == .image else { return } // check for image cell
+                coordinator?.showImagePicker { image in
+                    // Do something with image
+            }
+        }
+    }
 }
